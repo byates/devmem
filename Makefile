@@ -44,9 +44,8 @@ all: $(EXECUTABLE)
 build: clean all
 
 clean-default:
-	-@rm -f $(APP_NAME)
-	-@rm -rf $(OBJ_DIR)/../shared
-	-@rm -rf $(OBJ_DIR)
+	-@rm -rf $(PROJECT_ROOT)/Bin
+	-@rm -rf $(PROJECT_ROOT)/Obj
 	@echo 'Clean complete for "$(EXECUTABLE)"'
 
 clean: clean-default
