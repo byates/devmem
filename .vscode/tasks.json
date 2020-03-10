@@ -1,0 +1,46 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "make clean all",
+            "command": "make clean all",
+            "args": [],
+            "options": {
+                "env": {
+                    "SOC_LINUX_VER": "linux-socfpga-4.14.130-ltsi",
+                    "SOC_LINUX_KERNEL_LOC": "/soc_dev/buildroot/output/build/linux-socfpga-4.14.130-ltsi",
+                    "CROSS_COMPILE": "/soc_dev/vid10a1_arm_compiler/usr/bin/arm-none-linux-gnueabihf-",
+                    "ARCH": "arm"
+                },
+                "cwd": ""
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "shell",
+            "label": "make and copy to remote",
+            "options": {
+                "env": {
+                    "SOC_LINUX_VER": "linux-socfpga-4.14.130-ltsi",
+                    "SOC_LINUX_KERNEL_LOC": "/soc_dev/buildroot/output/build/linux-socfpga-4.14.130-ltsi",
+                    "CROSS_COMPILE": "/soc_dev/vid10a1_arm_compiler/usr/bin/arm-none-linux-gnueabihf-",
+                    "ARCH": "arm"
+                }
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "command": "make clean all copy_to_remote",
+            "group": "build"
+        }
+    ]
+}

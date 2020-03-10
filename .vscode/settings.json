@@ -1,0 +1,11 @@
+{
+    "C_Cpp.default.compilerPath": "/soc_dev/vid10a1_arm_compiler/usr/bin/arm-none-linux-gnueabihf-g++",
+    "C_Cpp.default.cppStandard": "c++11",
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.intelliSenseMode": "clang-x86",
+    "files.associations": {
+        "stdio.h": "c",
+        "time.h": "c"
+    },
+    "editor.minimap.size" : "fit"
+}

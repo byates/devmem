@@ -1,0 +1,49 @@
+[
+    {
+        "arguments": [
+            "/soc_dev/vid10a1_arm_compiler/usr/bin/arm-none-linux-gnueabihf-gcc",
+            "-c",
+            "-std=gnu11",
+            "-I/soc_dev/linux_utilities/devmem",
+            "-O0",
+            "-g",
+            "-Wall",
+            "-Wno-unknown-pragmas",
+            "-fmessage-length=0",
+            "-MF/soc_dev/linux_utilities/devmem/Obj/devmem/src/devmem.d",
+            "-MT/soc_dev/linux_utilities/devmem/Obj/devmem/src/devmem.d",
+            "-o",
+            "/soc_dev/linux_utilities/devmem/Obj/devmem/src/devmem.o",
+            "src/devmem.c"
+        ],
+        "directory": "/soc_dev/linux_utilities/devmem",
+        "file": "src/devmem.c"
+    },
+    {
+        "arguments": [
+            "/soc_dev/vid10a1_arm_compiler/usr/opt/ext-toolchain/bin/arm-none-linux-gnueabihf-gcc",
+            "-c",
+            "--sysroot",
+            "/soc_dev/vid10a1_arm_compiler/usr/arm-buildroot-linux-gnueabihf/sysroot",
+            "-mabi=aapcs-linux",
+            "-mfpu=vfpv3-d16",
+            "-marm",
+            "-mfloat-abi=hard",
+            "-mcpu=cortex-a9",
+            "-std=gnu11",
+            "-I/soc_dev/linux_utilities/devmem",
+            "-O0",
+            "-g",
+            "-Wall",
+            "-Wno-unknown-pragmas",
+            "-fmessage-length=0",
+            "-MF/soc_dev/linux_utilities/devmem/Obj/devmem/src/devmem.d",
+            "-MT/soc_dev/linux_utilities/devmem/Obj/devmem/src/devmem.d",
+            "-o",
+            "/soc_dev/linux_utilities/devmem/Obj/devmem/src/devmem.o",
+            "src/devmem.c"
+        ],
+        "directory": "/soc_dev/linux_utilities/devmem",
+        "file": "src/devmem.c"
+    }
+]

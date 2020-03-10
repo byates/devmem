@@ -26,6 +26,8 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
+// <time.h> requires a specific C source version (greater than)
+#define _POSIX_C_SOURCE 200112L
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -91,7 +93,7 @@ int main(int argc, char **argv)
     uint64_t target;
     int access_type = 'w';
     int access_size = 4;
-    unsigned int pagesize = (unsigned)getpagesize(); /* or sysconf(_SC_PAGESIZE)  */
+    unsigned int pagesize = (unsigned)sysconf(_SC_PAGESIZE);
     unsigned int map_size = pagesize;
     unsigned offset;
     char *endp = NULL;
