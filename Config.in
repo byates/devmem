@@ -1,0 +1,4 @@
+config BR2_PACKAGE_DEVMEM
+	bool "devmem: utility to rd/wr any location in physical memory"
+	help
+	  Simple utility to read/write from/to any location in physical memory.
